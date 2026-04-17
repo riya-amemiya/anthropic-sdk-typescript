@@ -501,6 +501,14 @@ export interface SessionCreateParams {
   environment_id: string;
 
   /**
+   * Body param: When true, opts out of server-side automatic prompt caching for
+   * this session. Defaults to false (caching enabled). Disabling caching avoids
+   * `cache_creation_input_tokens` charges for short-lived sessions or workloads
+   * where prompts rarely repeat.
+   */
+  disable_prompt_caching?: boolean;
+
+  /**
    * Body param: Arbitrary key-value metadata attached to the session. Maximum 16
    * pairs, keys up to 64 chars, values up to 512 chars.
    */

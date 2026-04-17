@@ -26,6 +26,7 @@ describe('resource sessions', () => {
     const response = await client.beta.sessions.create({
       agent: 'agent_011CZkYpogX7uDKUyvBTophP',
       environment_id: 'env_011CZkZ9X2dpNyB7HsEFoRfW',
+      disable_prompt_caching: true,
       metadata: { foo: 'string' },
       resources: [
         {
